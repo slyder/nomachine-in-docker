@@ -28,4 +28,13 @@ RUN curl -fSL "https://www.nomachine.com/free/linux/64/deb" -o nomachine.deb \
 ADD nxserver.sh /
 ENTRYPOINT ["/nxserver.sh"]
 
+# chrome stable install
+ADD https://dl.google.com/linux/linux_signing_key.pub \
+	https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
+	/tmp/
+RUN apt-key add /tmp/linux_signing_key.pub \
+	&& apt install -y --no-install-recommends /tmp/google-chrome-stable_current_amd64.deb
+# end chrome stable install
+
+
 RUN /etc/init.d/dbus start

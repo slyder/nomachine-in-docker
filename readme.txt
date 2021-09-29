@@ -4,6 +4,9 @@ https://knowledgebase.nomachine.com/DT11R00194
 Getting started with Web-based access
 https://www.nomachine.com/getting-started-with-web-based-access#virtualdesktop
 
+Forum topic:
+https://forums.nomachine.com/topic/nxframebuffer-failed-to-start-in-docker
+
 
 Docker error:
 
