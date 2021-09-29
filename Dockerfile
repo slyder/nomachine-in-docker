@@ -18,7 +18,11 @@ ENV DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket
 RUN apt-get install -y pulseaudio \
     && mkdir -p /var/run/dbus
 
-RUN curl -fSL "https://www.nomachine.com/free/linux/64/deb" -o nomachine.deb \
+
+#https://www.nomachine.com/free/linux/64/deb
+#https://download.nomachine.com/packages/7.6-PRODUCTION/Linux/nomachine-enterprise-desktop_7.6.2_4_amd64.deb \
+
+RUN curl -fSL "https://download.nomachine.com/packages/7.6-PRODUCTION/Linux/nomachine-enterprise-desktop_7.6.2_4_amd64.deb" -o nomachine.deb \
     && dpkg -i nomachine.deb \
     && groupadd -r ${USER} -g 433 \
     && useradd -u 431 -r -g ${USER} -d /home/${USER} -s /bin/bash ${USER} \

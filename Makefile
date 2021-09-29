@@ -31,7 +31,7 @@ build:
 .PHONY: run
 run:
 	@echo "$(OK_COLOR)==>$(NO_COLOR) Running $(REPOSITORY):$(TAG)"
-	@docker run --rm -ti -p 5901:5901 -p 4000:4000 --cap-add=SYS_PTRACE --name $(NAME) $(REPOSITORY):$(TAG)
+	@docker run --rm -ti -p 4443:4443 -p 5901:5901 -p 4000:4000 --cap-add=SYS_PTRACE --name $(NAME) $(REPOSITORY):$(TAG)
 
 .PHONY: shell
 shell:
