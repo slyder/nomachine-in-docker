@@ -30,3 +30,5 @@ DISPLAY=":1001" /usr/bin/google-chrome-stable --no-sandbox --disable-dev-shm-usa
 
 xn or crd
 https://www.trustradius.com/compare-products/chrome-remote-desktop-vs-nomachine-enterprise-desktop
+
+test change
